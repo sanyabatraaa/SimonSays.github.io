@@ -4,6 +4,7 @@ let btns=["yellow","green","blue","red"];
 let started=false;
 let level=0;
 let h2=document.querySelector("h2");
+let button=document.querySelector("button");
 let highestScore = 0; // Step 1: Initialize the highest score variable
 
 function updateHighestScore(currentScore) {
@@ -13,6 +14,16 @@ function updateHighestScore(currentScore) {
 }
 
 document.body.addEventListener("keypress",function(){
+    if(started==false){
+        started=true;
+        levelUp();
+       
+        console.log("started");
+        
+    }
+    
+});
+button.addEventListener("click",function(){
     if(started==false){
         started=true;
         levelUp();
